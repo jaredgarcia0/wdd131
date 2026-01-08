@@ -1,0 +1,31 @@
+body{
+  margin: 20px;
+  border: solid rgb(28, 29, 28);
+  background-color: rgb(252, 214, 197);
+}
+
+#content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+img{
+  width: 25%;
+}
+
+p{
+  color: blueviolet;
+  font-size: 1.5rem;
+}
+
+.line{
+  border: 1px solid rgb(163, 71, 216);
+  width: 60%;
+}
+
+ul.list{
+  list-style-type: none;
+ 
+}
