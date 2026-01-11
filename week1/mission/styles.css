@@ -1,0 +1,45 @@
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 3rem;
+    /* width: 70%; */
+    border: solid rgba(0, 0, 0, 0.393) 1px;
+}
+h1{
+    font-family: "Times New Roman",Times, serif;
+}
+
+h2{
+    margin-bottom: 0;
+    font-size: 1rem;
+    color: rgba(0, 0, 255, 0.479);
+}
+
+.divisor-line{
+    width: 65%;
+    border: solid rgba(0, 0, 255, 0.479);
+    margin: 10px 0;
+    border-radius: 50%;
+    margin-bottom: 2.5rem;
+}
+
+.mission-statement{
+    width: 60%;
+}
+
+ul{
+    width: 65%;
+}
+
+ul, li{
+    list-style-type: decimal;
+    margin-bottom: 20px;
+    
+}
+
+img{
+    margin-top: 3rem;
+    width: 10%;
+    margin-bottom: 3rem;
+}
