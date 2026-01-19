@@ -43,3 +43,11 @@ img{
     width: 10%;
     margin-bottom: 3rem;
 }
+
+.dark-mode{
+    background-color: rgb(54, 53, 53);
+}
+
+.Light-mode{
+    background-color: white;
+}
