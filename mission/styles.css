@@ -13,12 +13,12 @@ h1{
 h2{
     margin-bottom: 0;
     font-size: 1rem;
-    color: rgba(0, 0, 255, 0.479);
+    color: rgba(149, 149, 249, 0.479);
 }
 
 .divisor-line{
     width: 65%;
-    border: solid rgba(0, 0, 255, 0.479);
+    border: solid rgba(129, 129, 237, 0.479);
     margin: 10px 0;
     border-radius: 50%;
     margin-bottom: 2.5rem;
@@ -44,10 +44,20 @@ img{
     margin-bottom: 3rem;
 }
 
+/* Dark mode */
+
 .dark-mode{
-    background-color: rgb(54, 53, 53);
+    background-color: #333;
+    color: white;
 }
 
-.Light-mode{
-    background-color: white;
+.dark-mode{
+    border: white 1px;
+ 
 }
+
+.Light-mode {
+    background-color: white;
+    color: black;
+}
+
