@@ -1,0 +1,141 @@
+/* Colors
+background-color= 7FB7BE */
+/* h1. color = #0F0326 like a dark blue */
+/* other cool dark color #5C2751 */
+
+
+body{
+  background-color: #FAF3DD;  
+    font-family: Georgia, "Times New Roman", serif;
+  color: #222;
+  background: #fff;
+}
+
+
+main, header, footer{
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+h1{
+    color: #141301;
+    text-align: center;
+}
+
+hr{
+    border: none;
+    height: 2px;
+    background-color: #d7611e;
+    margin-top: 20px;
+}
+
+nav ul{
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;        
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li{
+  display: block;
+}
+
+header nav a{
+  color: #b3383b;          
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* BOOOOKKKKsss  */
+
+.book-container{
+  display: block;           
+  padding: 14px 0 8px;
+}
+
+.book-info{
+  text-align: right;
+  font-style: italic;
+  margin: 10px 0 18px;
+}
+
+.book-info p{
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.book-description h2{
+  text-align: center;
+  color: #b3383b;
+  font-size: 34px;
+  margin: 0 0 16px;
+  font-weight: 700;
+}
+
+.book-description img{
+  display: block;
+  margin: 0 auto 16px;
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+}
+
+.book-description p{
+  max-width: 520px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer{
+   
+  margin-top: 22px;
+  padding-top: 14px;
+  text-align: center;
+  font-size: 22px;
+}
+
+@media (min-width: 800px){
+
+  header nav ul{
+    justify-content: flex-end;
+    gap: 40px;
+  }
+
+  .book-container{
+    display: grid;
+    grid-template-columns: 180px 1fr; 
+    gap: 40px;
+    align-items: start;
+    padding-top: 26px;
+  }
+
+  .vertical-line{
+    transform: rotate(90deg);
+    position: absolute;
+    left: 50%;
+  }
+  .book-info{
+    margin: 0;
+  }
+  .book-description{
+    border-left: 2px solid #e6b07a;
+    padding-left: 30px; 
+
+  }
+  .book-description h2{
+    text-align: left; 
+    margin-top: 6px;
+  }
+
+  .book-description img{
+    margin-left: 0;}   
+
+  .book-description p{
+    margin-left: 0;
+  }
+}
