@@ -1,0 +1,59 @@
+#credit-card-form {
+    display: grid;
+    grid-template-columns: repeat(4, 100px); /* Matches the 4-column guide */
+    grid-template-rows: auto 200px 50px;
+    gap: 10px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.card-face {
+    grid-column: 1 / 4; 
+    grid-row: 2;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: grid;
+    height: 250px;
+}
+
+.front {
+    background: #d3d3d3;
+    z-index: 2;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto auto;
+    align-items: end;
+}
+
+.back {
+    background: #bebebe;
+    grid-column: 2 / 5; 
+    margin-top: 40px;   
+    z-index: 1;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 1fr auto;
+    justify-items: end;
+}
+
+.cvc-area{
+    width: 20%;
+}
+
+
+.total-label { grid-column: 1 / -1; font-weight: bold; }
+.card-number { grid-column: 1 / -1; }
+.exp-area { grid-column: 2; }
+
+.magnetic-stripe {
+    background: #000;
+    width: 100%;
+    height: 40px;
+    grid-row: 1;
+    margin-top: 10px;
+}
+
+#submitBtn {
+    grid-column: 4;
+    grid-row: 3;
+    height: 40px;
+}
