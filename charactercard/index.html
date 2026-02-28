@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Character Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Palatino+Linotype&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="charactercard.js" defer></script>
+</head>
+<body>
+
+<div class="card" id="characterCard">
+  <img id="charImage" src="monster.webp">
+  <div class="name-bar">
+    <h2 id="charName">Snortleblat</h2>
+  </div>
+  <div class="stats">
+    <p><span class="label">Class:</span> <span id="charClass">Swamp Beast Diplomat</span></p>
+    <p><span class="label">Level:</span> <span id="charLevel">5</span></p>
+    <p><span class="label">Health:</span> <span id="charHealth">100</span></p>
+  </div>
+  <div class="health-bar-container">
+    <div class="health-bar" id="healthBar" style="width: 100%"></div>
+  </div>
+  <div class="message" id="message"></div>
+  <div class="buttons">
+    <button onclick="character.attacked()">Attacked</button>
+    <button onclick="character.levelUp()">Level Up</button>
+  </div>
+</div>
