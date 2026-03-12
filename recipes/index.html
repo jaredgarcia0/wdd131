@@ -36,8 +36,8 @@
 
         <search class="search-container">
             <form>
-                <input type="search" placeholder="Find a recipe">
-                <button type="submit">🔍</button>
+                <input type="search" id="search-input" placeholder="Find a recipe">
+                <button type="button" id="search-button">🔍</button>
             </form>
         </search>
     </header>
@@ -45,20 +45,9 @@
     <hr>
     <main>
         <section>
-            <article class="recipe-box">
-                <img src="images/apple-crisp.jpg" alt="Apple crisp with ice cream in a bowl">
+            <article  id="recipe-container">
                 
-                <div class="recipe-info">
-                    <button type="button">dessert</button>
-
-                    <h2>Apple Crisp</h2>
-
-                    <div class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-                        <span aria-hidden="true">⭐⭐⭐⭐☆</span>
-                    </div>
-
-                    <p>This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
-                </div>
+            </article>
         </section>
     </main>
 
