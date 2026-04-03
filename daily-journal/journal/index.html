@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <span class="nav-logo">📓 Daily Journal</span>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="entries.html">Journal Entries</a>
+            <a href="entry-form.html">Calendar</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+     <section class="hero">
+        <h1>Welcome back</h1>
+        <p>What's on your mind today? This is a safe enviroment.</p>
+        <a href="entry-form.html" class="btn btn-accent"> New Journal Entry</a>
+     </section>
+    
+     <!-- Stats -->
+    <div class="container">
+        <div class="stats-row">
+            <div class="stat-card">
+                <span class="stat-value" id="streak">0</span>
+                <span class="stat-label">Total Entries</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value" id="this-week">0</span>
+                <span class="stat-label">This Week</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value" id="streak">0 🔥</span>
+                <span class="stat-label">Day Streak</span>
+            </div>
+        </div>
+
+        <!-- Recent Entries -->
+        <div class="section-header">
+            <h2>Recent Entries</h2>
+            <a href="entries.html">View all </a>
+        </div>
+
+        <div id="recent-entries-list">
+            <!-- Filled by home.js -->
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>
