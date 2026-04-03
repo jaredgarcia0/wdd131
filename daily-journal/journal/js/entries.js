@@ -55,7 +55,7 @@ function renderEntries() {
                 ${entry.tags.map(t => `<span class="tag">${t}</span>`).join('')}
             </div>
             </div>
-            <div style="display:flex; gap:8px; margin-left:1rem; flex-shrink:0;">
+            <div class="card-actions" style="display:flex; gap:8px; margin-left:1rem; flex-shrink:0;">
             <a href="entry-form.html?id=${entry.id}" class="btn btn-outline">Edit</a>
             <button class="btn btn-outline" style="color:#e05555; border-color:#e05555;"
                 onclick="handleDelete('${entry.id}')">Delete</button>

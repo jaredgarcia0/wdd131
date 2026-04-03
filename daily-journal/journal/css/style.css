@@ -336,3 +336,193 @@ nav {
   color: var(--primary-teal);
 }
 .empty-state p { font-size: 0.9rem; padding: 0; margin-top: 8px; }
+
+/* ================================
+   RESPONSIVE — add at end of style.css
+   ================================ */
+
+/* === TABLET (max 768px) === */
+@media (max-width: 768px) {
+
+  body {
+    padding: 0;
+    font-size: 16px;
+  }
+
+  /* Nav — stack logo on left, links on right, smaller text */
+  nav {
+    padding: 0 1rem;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .nav-logo {
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+  .nav-links {
+    gap: 0;
+  }
+  .nav-links a {
+    padding: 6px 10px;
+    font-size: 0.82rem;
+    min-width: unset;
+  }
+
+  /* Hero — smaller padding and text */
+  .hero {
+    padding: 2.5rem 1.25rem;
+  }
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  /* Stats — 3 columns still but smaller */
+  .stats-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+  }
+  .stat-card {
+    padding: 1rem 0.5rem;
+  }
+  .stat-value {
+    font-size: 1.4rem;
+  }
+  .stat-label {
+    font-size: 0.7rem;
+  }
+
+  /* Container padding */
+  .container {
+    padding: 1.25rem 1rem;
+  }
+
+  /* Section header */
+  .section-header h2 {
+    font-size: 1.2rem;
+  }
+
+  /* Cards */
+  .card {
+    padding: 1rem 1.1rem;
+  }
+
+  /* Filters — stack search above selects */
+  .filters-bar {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .filter-controls {
+    flex-direction: row;
+    gap: 8px;
+  }
+  .filter-controls select {
+    flex: 1;
+  }
+
+  /* Form card */
+  .form-card {
+    padding: 1.5rem 1.1rem;
+    margin: 0;
+  }
+
+  /* Form actions — stack buttons vertically */
+  .form-actions {
+    flex-direction: column;
+  }
+  .form-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  #delete-btn {
+    margin-left: 0 !important;
+  }
+}
+
+/* === MOBILE (max 480px) === */
+@media (max-width: 480px) {
+
+  /* Nav — wrap links to second row */
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+  }
+  .nav-logo {
+    padding: 12px 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+  .nav-links {
+    display: flex;
+    justify-content: stretch;
+  }
+  .nav-links a {
+    flex: 1;
+    text-align: center;
+    padding: 10px 4px;
+    font-size: 0.8rem;
+    border-radius: 0;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 2rem 1rem;
+  }
+  .hero h1 {
+    font-size: 1.4rem;
+  }
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  /* Stats — stack into single column on very small screens */
+  .stats-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .stat-card {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+  }
+  .stat-value {
+    font-size: 1.3rem;
+  }
+  .stat-label {
+    font-size: 0.78rem;
+  }
+
+  /* Entry cards — hide Edit/Delete buttons, use full tap area instead */
+  .card-actions {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .card-actions .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Filter controls stack vertically */
+  .filter-controls {
+    flex-direction: column;
+  }
+
+  /* Form */
+  .form-card {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  .form-group textarea {
+    min-height: 140px;
+  }
+
+  /* Section header */
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
