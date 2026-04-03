@@ -355,6 +355,8 @@ nav {
 /* === SEARCH === */
 .search-bar {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .search-bar input {
@@ -368,6 +370,7 @@ nav {
   background: var(--text-white);
   color: var(--text-main);
   transition: border-color 0.2s;
+
 }
 
 .search-bar input:focus {
