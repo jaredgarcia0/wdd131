@@ -9,34 +9,32 @@ const saveBtn    = document.getElementById('save-btn');
 const deleteBtn  = document.getElementById('delete-btn');
 const formTitle  = document.getElementById('form-title');
 
-// If editing, pre-fill the form
+// Pre-fill form if editing
 if (isEdit) {
   const entry = getEntryById(entryId);
   if (entry) {
-    formTitle.textContent     = 'Edit Entry';
-    document.title            = 'Edit Entry — Daily Journal';
-    titleInput.value          = entry.title;
-    bodyInput.value           = entry.body;
-    tagsInput.value           = entry.tags.join(', ');
-    deleteBtn.style.display   = 'inline-flex';
-    saveBtn.textContent       = 'Save Changes';
+    formTitle.textContent   = 'Edit Entry';
+    document.title          = 'Edit Entry — Daily Journal';
+    titleInput.value        = entry.title;
+    bodyInput.value         = entry.body;
+    tagsInput.value         = entry.tags.join(', ');
+    deleteBtn.style.display = 'inline-flex';
+    saveBtn.textContent     = 'Save Changes';
   } else {
-    // Entry not found — go back
     alert('Entry not found.');
     location.href = 'entries.html';
   }
 }
 
-// Save
-saveBtn.addEventListener('click', () => {
+// Save entry
+saveBtn.addEventListener('click', function() {
   const title = titleInput.value.trim();
   const body  = bodyInput.value.trim();
   const tags  = tagsInput.value
     .split(',')
-    .map(t => t.trim().toLowerCase())
-    .filter(t => t.length > 0);
+    .map(function(t) { return t.trim().toLowerCase(); })
+    .filter(function(t) { return t.length > 0; });
 
-  // Basic validation
   if (!title) {
     titleInput.focus();
     titleInput.style.borderColor = '#e05555';
@@ -50,24 +48,26 @@ saveBtn.addEventListener('click', () => {
     return;
   }
 
+  const originalEntry = isEdit ? getEntryById(entryId) : null;
+
   const entry = {
     id:    isEdit ? entryId : null,
-    date:  isEdit ? getEntryById(entryId).date : new Date().toISOString(),
-    title,
-    body,
-    tags
+    date:  isEdit && originalEntry ? originalEntry.date : new Date().toISOString(),
+    title: title,
+    body:  body,
+    tags:  tags
   };
 
   saveEntry(entry);
   location.href = 'index.html';
 });
 
-// Reset border color on input
-titleInput.addEventListener('input', () => titleInput.style.borderColor = '');
-bodyInput.addEventListener('input',  () => bodyInput.style.borderColor  = '');
+// Reset validation styles on input
+titleInput.addEventListener('input', function() { titleInput.style.borderColor = ''; });
+bodyInput.addEventListener('input',  function() { bodyInput.style.borderColor  = ''; });
 
-// Delete
-deleteBtn.addEventListener('click', () => {
+// Delete entry
+deleteBtn.addEventListener('click', function() {
   if (!confirm('Delete this entry? This cannot be undone.')) return;
   deleteEntry(entryId);
   location.href = 'entries.html';

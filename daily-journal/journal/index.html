@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Journal</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Daily Journal — write, tag and revisit your personal journal entries.">
+  <title>Home — Daily Journal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav>
-        <span class="nav-logo">📓 Daily Journal</span>
-        <div class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="entries.html">Journal Entries</a>
-            <a href="entry-form.html">Calendar</a>
-        </div>
-    </nav>
 
-    <!-- Hero -->
-     <section class="hero">
-        <img class="hero-img" src="images/logo.png" alt="logo">
-        <h1>Welcome back</h1>
-        <p>What's on your mind today? This is a safe enviroment.</p>
-        <a href="entry-form.html" class="btn btn-accent"> New Journal Entry</a>
-     </section>
-    
-     <!-- Stats -->
-    <div class="container">
-        <div class="stats-row">
-            <div class="stat-card">
-                <span class="stat-value" id="streak">0</span>
-                <span class="stat-label">Total Entries</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-value" id="this-week">0</span>
-                <span class="stat-label">This Week</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-value" id="streak">0 🔥</span>
-                <span class="stat-label">Day Streak</span>
-            </div>
-        </div>
+  <nav aria-label="Main navigation">
+    <span class="nav-logo">📓 Daily Journal</span>
+    <div class="nav-links">
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="entries.html">Journal Entries</a>
+      <a href="entry-form.html">New Entry</a>
+    </div>
+  </nav>
 
-        <!-- Recent Entries -->
-        <div class="section-header">
-            <h2>Recent Entries</h2>
-            <a href="entries.html">View all </a>
-        </div>
+  <section class="hero">
+    <img class="hero-img" src="images/logo.png" alt="Daily Journal logo">
+    <h1>Welcome Back</h1>
+    <p>What's on your mind today? This is a safe environment.</p>
+    <a href="entry-form.html" class="btn btn-accent">+ New Journal Entry</a>
+  </section>
 
-        <div id="recent-entries-list">
-            <!-- Filled by home.js -->
-        </div>
+  <main class="container">
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <span class="stat-value" id="total-entries">0</span>
+        <span class="stat-label">Total Entries</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value" id="this-week">0</span>
+        <span class="stat-label">This Week</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value" id="streak">0 🔥</span>
+        <span class="stat-label">Day Streak</span>
+      </div>
     </div>
 
-    <script src="js/data.js"></script>
-    <script src="js/home.js"></script>
+    <div class="section-header">
+      <h2>Recent Entries</h2>
+      <a href="entries.html">View all →</a>
+    </div>
+
+    <div id="recent-entries-list">
+      <!-- Filled by home.js -->
+    </div>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/home.js"></script>
 </body>
 </html>
